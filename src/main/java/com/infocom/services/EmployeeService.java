@@ -11,11 +11,9 @@ public interface EmployeeService {
 
     Employee findOne(Integer id);
 
-    Employee save(Employee tradePoint);
+    Employee save(Employee employee);
 
-    Employee update(Integer id, Employee tradePoint, Boolean isAdmin);
+    Employee update(Integer id, Employee employee);
 
     void delete(Integer id);
-
-    Collection<Employee> getByUser(User currenUser);
 }

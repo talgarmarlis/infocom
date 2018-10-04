@@ -13,48 +13,42 @@ import java.util.Collection;
 @Transactional
 public class EmployeeServiceImpl implements EmployeeService {
 
-    private final EmployeeRepository tradePointRepository;
+    private final EmployeeRepository employeeRepository;
 
-    public EmployeeServiceImpl(EmployeeRepository tradePointRepository){
-        this.tradePointRepository = tradePointRepository;
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository){
+        this.employeeRepository = employeeRepository;
     }
 
     @Override
     public Collection<Employee> findAll() {
-        return tradePointRepository.findAll();
+        return employeeRepository.findAll();
     }
 
     @Override
     public Employee findOne(Integer id) {
-        return tradePointRepository.findOne(id);
+        return employeeRepository.findOne(id);
     }
 
     @Override
-    public Employee save(Employee tradePoint) {
-        return tradePointRepository.save(tradePoint);
+    public Employee save(Employee employee) {
+        return employeeRepository.save(employee);
     }
 
     @Override
-    public Employee update(Integer id, Employee tradePoint, Boolean isAdmin) {
+    public Employee update(Integer id, Employee employee) {
         Employee toBeUpdated = findOne(id);
         if (toBeUpdated == null) {
             throw new RuntimeException("TradePoint not found");
         }
-        if(isAdmin) BeanUtils.copyProperties(tradePoint, toBeUpdated, "id", "companyId");
-        else BeanUtils.copyProperties(tradePoint, toBeUpdated, "id", "companyId", "userId");
+        BeanUtils.copyProperties(employee, toBeUpdated, "id", "companyId");
         return toBeUpdated;
     }
 
     @Override
     public void delete(Integer id) {
-        Employee tradePoint = findOne(id);
-        if (tradePoint != null) {
-            tradePointRepository.delete(tradePoint);
+        Employee employee = findOne(id);
+        if (employee != null) {
+            employeeRepository.delete(employee);
         }
-    }
-
-    @Override
-    public Collection<Employee> getByUser(User currenUser) {
-        return tradePointRepository.findByUserId(currenUser.getId());
     }
 }
