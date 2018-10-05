@@ -6,12 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="infocom" />
+        <module name="app" />
+        <module name="ui" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="infocom (1)" target="1.8" />
-      <module name="ui" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
