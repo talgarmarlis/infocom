@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="743ec0e8-8527-4feb-b0be-7ace75b86f03" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/infocom/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infocom/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/infocom/models/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infocom/models/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ui/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/sources/helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/models/service.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/sources/models/service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/myapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/sources/myapp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/sources/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/baseDetailView.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/sources/views/baseDetailView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/baseMasterView.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/sources/views/baseMasterView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/formButtons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/sources/views/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/settings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/top.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/sources/views/top.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/trends/trend.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/trends/trendTag.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/trends/trends.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/users/resetPassword.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/users/role.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/users/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/sources/views/users/users.js" beforeDir="false" />
-    </list>
+    <list default="true" id="743ec0e8-8527-4feb-b0be-7ace75b86f03" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/ui/target/" />
     <ignored path="$PROJECT_DIR$/app/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -138,7 +114,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538866170709" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538866969211" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../inscada-mono" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -199,7 +175,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5751000" />
+    <option name="totallyTimeSpent" value="6201000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -211,7 +187,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
