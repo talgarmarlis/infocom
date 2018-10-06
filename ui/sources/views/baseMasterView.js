@@ -1,16 +1,15 @@
 import { JetView } from "webix-jet";
 import { CrudToolbar } from "./crudToolbar";
-import { customCheckbox, confirm, warn, info } from "helpers";
+import { confirm, warn, info } from "helpers";
 
 export class BaseMasterView extends JetView {
 
   config() {
-    this._ = this.app.getService("locale")._;
-    this.customCheckbox = customCheckbox;
+
     this.confirmOptions = {
-      ok: this._("Yes"),
-      cancel: this._("No"),
-      text: this._("Are you sure you want to continue?"),
+      ok: "Yes",
+      cancel: "No",
+      text: "Are you sure you want to continue?",
     };
 
     return this.getData().then(data => {
@@ -52,7 +51,7 @@ export class BaseMasterView extends JetView {
 
   createGridToolbar() {
     return CrudToolbar({
-      title: this._(this.gridConfig.title),
+      title: this.gridConfig.title,
       add: () => this.add(),
       edit: () => this.update(),
       remove: () => this.remove(),
@@ -62,7 +61,7 @@ export class BaseMasterView extends JetView {
 
   createDetailGridToolbar() {
     return CrudToolbar({
-      title: this._(this.detailGridConfig.title),
+      title: this.detailGridConfig.title,
       add: () => this.addDetail(),
       edit: () => this.updateDetail(),
       remove: () => this.removeDetail(),
@@ -150,7 +149,7 @@ export class BaseMasterView extends JetView {
     if (this.getSelected()) {
       this.showDetailPopup(this.getSelected(), {});
     } else {
-      warn(this._("Please select a master record first"));
+      webix.message({type:"error", text:"Please select a master record first"});
     }
   }
 
@@ -178,7 +177,7 @@ export class BaseMasterView extends JetView {
         if (detailGrid) {
           detailGrid.clearAll();
         }
-        info(this._("Item removed"));
+        webix.message("Item removed");
       }));
     }
   }
@@ -189,7 +188,7 @@ export class BaseMasterView extends JetView {
     if (!selectedDetail) return;
     confirm(this.confirmOptions, () => this.removeItemDetail(selected, selectedDetail).then(() => {
       this.getDetailGrid().remove(selectedDetail.id);
-      info(this._("Item detail removed"));
+      webix.message("Item detail removed");
     }));
   }
 
@@ -202,14 +201,14 @@ export class BaseMasterView extends JetView {
         this.data.push(newItem);
         grid.select(id);
         grid.showItem(id);
-        info(this._("A new item added"));
+        webix.message("A new item added");
         if (!cont) this.hidePopup();
       }))
     } else {
       confirm(this.confirmOptions, () => this.updateItem(item).then(() => {
         this.getGrid().updateItem(item.id, item);
         this.data[this.data.findIndex(i => i.id == item.id)] = item;
-        info(this._("Item updated"));
+        webix.message("Item updated");
         this.hidePopup();
       }))
     }
@@ -224,13 +223,13 @@ export class BaseMasterView extends JetView {
         let id = detailGrid.add(newItemDetail);
         detailGrid.select(id);
         detailGrid.showItem(id);
-        info(this._("A new item detail added"));
+        webix.message("A new item detail added");
         if (!cont) this.hideDetailPopup();
       }))
     } else {
       confirm(this.confirmOptions, () => this.updateItemDetail(item, itemDetail).then(() => {
         this.getDetailGrid().updateItem(itemDetail.id, itemDetail);
-        info(this._("Item detail updated"));
+        webix.message("Item detail updated");
         this.hideDetailPopup();
       }))
     }

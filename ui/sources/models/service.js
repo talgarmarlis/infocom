@@ -1,69 +1,41 @@
 import { get, post, put, del } from "utils";
 
-export const FIRED_ALARM_STATUSES = ["On", "Off"];
-
-export function getAlarms() {
-  return get('/alarms');
+export function getEmployees() {
+  return get('/employees');
 }
 
-export function getAlarmsByProjectId(projectId) {
-  return get('/alarms?projectId=' + projectId);
+export function getEmployee(id) {
+  return get('/employees/' + id );
 }
 
-export function addAlarm(alarm) {
-  return post('/alarms', alarm)
+export function addEmployee(employee) {
+  return post('/employees', employee)
 }
 
-export function updateAlarm(alarm) {
-  return put('/alarms/' + alarm.id, alarm);
+export function updateEmployee(employee) {
+  return put('/employees/' + employee.id, employee);
 }
 
-export function removeAlarm(alarm) {
-  return del('/alarms/' + alarm.id);
+export function removeEmployee(employee) {
+  return del('/employees/' + employee.id);
 }
 
-export function getFiredAlarms(filter) {
-  var params = "?";
-  for (var property in filter) {
-    if (filter.hasOwnProperty(property)) {
-      params += property + "=" + filter[property] + "&";
-    }
-  }
-  return get('/alarms/fired-alarms' + params);
+export function getCompanies() {
+  return get('/companies');
 }
 
-export function getMonitorData(projectId) {
-  return get('/alarms/monitor?projectId=' + projectId);
+export function getCompany(id) {
+  return get('/companies/' + id );
 }
 
-export function acknowledgeAlarm(id) {
-  return post('/alarms/fired-alarms/' + id + "/acknowledge");
+export function addCompany(company) {
+  return post('/companies', company)
 }
 
-export function getAlarmStatuses(alarms) {
-  var param = '';
-  for (var i = 0; i < alarms.length; i++) {
-    param = param + 'alarmIds[]=' + alarms[i].id + '&';
-  }
-  return get('/alarms/statuses?' + param);
+export function updateCompany(company) {
+  return put('/companies/' + company.id, company);
 }
 
-export function getAlarmStatusById(id) {
-  return get('/alarms/' + id + '/status');
-}
-
-export function activateAlarm(id) {
-  return post('/alarms/' + id + '/activate');
-}
-
-export function deactivateAlarm(id) {
-  return post('/alarms/' + id + '/deactivate');
-}
-
-export function getAlarmSettings(projectId) {
-  return get('/alarms/settings?projectId=' + projectId);
-}
-
-export function setAlarmSettings(projectId, alarmSetting) {
-  return put('/alarms/settings?projectId=' + projectId, alarmSetting);
+export function removeCompany(company) {
+  return del('/companies/' + company.id);
 }

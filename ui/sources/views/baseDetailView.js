@@ -3,7 +3,7 @@ import { JetView } from "webix-jet";
 export class BaseDetailView extends JetView {
 
   config() {
-    this._ = this.app.getService("locale")._;
+
     this.formConfig = this.getFormConfig();
     this.position = this.formConfig.position || function(state) {
       state.width = this.$scope.formConfig.width || 400;
@@ -54,7 +54,7 @@ export class BaseDetailView extends JetView {
 
   validate() {
     if (!this.getForm().validate()) {
-      webix.message({ type: "error", text: this._("Form data is invalid") }); //TODO
+      webix.message({ type: "error", text: "Form data is invalid" }); //TODO
       return false;
     }
     return true;
@@ -78,14 +78,14 @@ export class BaseDetailView extends JetView {
           view: "button",
           width: 150,
           align: "left",
-          label: this._("Save & Continue"),
+          label: "Save & Continue",
           click: () => this.save("CONTINUE")
         }, {}, {
           view: "button",
           type: "form",
           width: 125,
           align: "right",
-          label: this._("Save"),
+          label: "Save",
           click: () => this.save()
         }]
       }
@@ -99,7 +99,7 @@ export class BaseDetailView extends JetView {
           type: "form",
           width: 125,
           align: "right",
-          label: this._("Save"),
+          label: "Save",
           click: () => this.save()
         }]
       }

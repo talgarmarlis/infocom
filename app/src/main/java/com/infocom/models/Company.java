@@ -49,7 +49,6 @@ public class Company {
     @Size(max = 50)
     private String certificateNumber;
 
-    @NotNull
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date certificateDate;
 

@@ -31,10 +31,6 @@
     "webpack-dev-server": "^2.11.3"
   },
   "dependencies": {
-    "amcharts3": "^3.21.13",
-    "jsqr": "^1.1.0",
-    "qrcode-generator": "^1.4.0",
-    "velocity-animate": "^1.5.1",
     "webix-jet": "^1.1.0"
   }
 }

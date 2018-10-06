@@ -4,8 +4,6 @@ import { register } from "models/session";
 export default class LoginView extends JetView {
 
   config() {
-    const _ = this.app.getService("locale")._;
-    const lang = this.app.getService("locale").getLang();
     this.userService = this.app.getService("user");
 
     const loginForm = {
@@ -18,11 +16,11 @@ export default class LoginView extends JetView {
         labelPosition: "top"
       },
       rows: [
-        { view: "text", name: "username", label: _("Username") },
-        { view: "text", name: "password", label: _("Password"), type: "password" },
+        { view: "text", name: "username", label: "Username" },
+        { view: "text", name: "password", label: "Password", type: "password" },
         {
           view: "button",
-          value: _("Login"),
+          value: "Login",
           click: function() {
             this.$scope.doLogin();
           },
@@ -39,26 +37,13 @@ export default class LoginView extends JetView {
       view: "label",
       height: 150,
       align: "center",
-      label: "<img src='/images/inscada.png' style='height:150px'>"
-    };
-
-    const langButtons = {
-      name: "lang",
-      view: "segmented",
-      width: 100,
-      align: "right",
-      options: [
-        { id: "en", value: "EN" },
-        { id: "tr", value: "TR" }
-      ],
-      click: () => this.toggleLanguage(),
-      value: lang
+      label: "<img src='/images/user.png' style='height:150px'>"
     };
 
     return {
       rows: [
         {},
-        { cols: [{}, { view: "form", elements: [logo, loginForm, langButtons] }, {}] },
+        { cols: [{}, { view: "form", elements: [logo, loginForm] }, {}] },
         {}
       ]
     }
@@ -77,12 +62,6 @@ export default class LoginView extends JetView {
           });
         });
     }
-  }
-
-  toggleLanguage() {
-    const langs = this.app.getService("locale");
-    const value = this.getRoot().queryView({ name: "lang" }).getValue();
-    langs.setLang(value);
   }
 
   init(view) {

@@ -1,12 +1,8 @@
 import "./styles/app.css";
-import "./styles/animate.css";
-import "./styles/tableColor.css";
 import { JetApp, plugins } from "webix-jet";
 import session from "models/session";
 
 webix.ready(() => {
-  //webix.codebase = "../../libs/";
-
   var app = new JetApp({
     id: "inscada management ui",
     version: 1.0,

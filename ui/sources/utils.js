@@ -1,4 +1,4 @@
-export const baseUrl = "http://192.168.2.154:8081/api"; //"http://" + window.location.host + "/api";
+export const baseUrl = "http://" + window.location.host + "/api";
 const headers = {
   "Content-Type": "application/json"
 };
