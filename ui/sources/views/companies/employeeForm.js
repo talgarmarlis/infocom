@@ -36,7 +36,7 @@ export class EFormView extends BaseDetailView {
           },
           { view: "text", label: "Name", name: "name", required: true },
           { view: "text", label: "Surname", name: "surname", required: true },
-          { view: "text", label: "Email", name: "email", required:true },
+          { view: "text", label: "Email", name: "email", required: true },
           { view: "text", label: "Position", name: "position", required: true },
 
           { template: "Contact Details", type: "section" },

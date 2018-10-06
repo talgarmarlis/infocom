@@ -4,7 +4,7 @@ import session from "models/session";
 
 webix.ready(() => {
   var app = new JetApp({
-    id: "inscada management ui",
+    id: "infocom ui",
     version: 1.0,
     start: "/top/home",
     debug: true
